@@ -5,7 +5,7 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q 04052210360e3b5b7d070932639f1989cafc772d
++ git reset --hard -q 8d467da584ef7dc504e4cf268ad8321f116f7a0e
 + git submodule update --init --recursive
 + echo hi
 hi
