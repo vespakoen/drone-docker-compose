@@ -9,6 +9,8 @@ Linux only at the moment.
 - sqlite3
 - jq
 - apache2-utils (for htpasswd)
+- npm
+- lt (`npm install -g localtunnel`)
 
 ## Generating a htpasswd file
 
@@ -38,6 +40,14 @@ export DOCKER_REGISTRY_HTTP_SECRET=INSERT_RANDOM_LONG_STRONG_HERE
 ```shell
 ./up.sh
 ```
+
+**Expose to the world**
+
+```shell
+lt --port 8000
+```
+
+Grab the localtunnel url and update it in the github application settings
 
 **Trigger a build:**
 
