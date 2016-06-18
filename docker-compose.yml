@@ -1,10 +1,10 @@
 version: '2'
 services:
   drone:
-    # image: drone/drone:0.5
-    build:
-      dockerfile: Dockerfile
-      context: ./drone
+    image: vespakoen/drone:latest
+    # build:
+    #   dockerfile: Dockerfile
+    #   context: ./drone
     restart: always
     privileged: true
     environment:
