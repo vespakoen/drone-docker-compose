@@ -6,3 +6,5 @@ pipeline:
   docker:
     repo: vespakoen/drone-docker-compose
     tag: development
+    environment:
+      - DOCKER_LAUNCH_DEBUG="true"
