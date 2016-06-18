@@ -16,6 +16,8 @@ pipeline:
       - export PATH=$PATH:$GOPATH/bin
       - cd drone
       - pwd
+      - make deps
+      - make gen
       - make build
   docker:
     debug: true
