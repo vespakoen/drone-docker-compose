@@ -47,7 +47,8 @@ export DOCKER_REGISTRY_HTTP_SECRET=INSERT_RANDOM_LONG_STRONG_HERE
 lt --port 8000
 ```
 
-Grab the localtunnel url and update it in the github application settings
+Grab the localtunnel url and update it in the github oAuth developer application callback url
+and the webhook url on the repository settings (only the hostname part)
 
 **Trigger a build:**
 
