@@ -25,3 +25,21 @@ pipeline:
     tag: development
     storage_driver: vfs
     # insecure: true
+  build:
+    image: drone/golang:1.5
+    environment:
+      - GO15VENDOREXPERIMENT=1
+      - GOPATH=/drone-docker
+    commands:
+      - export PATH=$PATH:$GOPATH/bin
+      - export GOOS=linux
+      - export GOARCH=amd64
+      - export CGO_ENABLED=0
+      - go build -a -tags netgo
+      - make docker
+  docker:
+    debug: true
+    repo: vespakoen/drone-docker
+    tag: development
+    storage_driver: vfs
+    # insecure: true
