@@ -3,7 +3,6 @@ pipeline:
     image: busybox
     commands:
       - echo hi
-  # docker:
-  #   repo: vespakoen/drone-docker-compose
-  #   tag: development
-
+  docker:
+    repo: vespakoen/drone-docker-compose
+    tag: development
