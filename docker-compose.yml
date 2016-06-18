@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
       DRONE_GITHUB: "true"
-      DRONE_GITHUB_CLIENT: fb09d223469748b46a33
-      DRONE_GITHUB_SECRET: fc759d1c98f9722231f4f577fa0fcb66265fe003
-      DRONE_AGENT_SECRET: 1n3iu23uihui23453632jn
+      DRONE_GITHUB_CLIENT: $DRONE_GITHUB_CLIENT
+      DRONE_GITHUB_SECRET: $DRONE_GITHUB_SECRET
+      DRONE_AGENT_SECRET: $DRONE_AGENT_SECRET
       DRONE_ADMIN: vespakoen
       I_UNDERSTAND_I_AM_USING_AN_UNSTABLE_VERSION: "true"
       I_AGREE_TO_FIX_BUGS_AND_NOT_FILE_BUGS: "true"
@@ -22,12 +22,12 @@ services:
     restart: always
     environment:
       DRONE_SERVER: http://drone:8000
-      DRONE_SECRET: 1n3iu23uihui23453632jn
-      DRONE_DEBUG: "true"
+      DRONE_SECRET: $DRONE_AGENT_SECRET
       DRONE_PLUGIN_PRIVILEGED: "true"
       DRONE_PLUGIN_NETRC: "true"
       I_UNDERSTAND_I_AM_USING_AN_UNSTABLE_VERSION: "true"
       I_AGREE_TO_FIX_BUGS_AND_NOT_FILE_BUGS: "true"
+      DRONE_DEBUG: "true"
     links:
       - drone
     volumes:
