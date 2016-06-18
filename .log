@@ -5,12 +5,26 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q 2f14e724865df0067ad778697f4abf44978e239b
++ git reset --hard -q 01d9d8616432785e198a227fbdfb5d12f14d5b0c
 + git submodule update --init --recursive
 Submodule 'drone' (https://github.com/vespakoen/drone.git) registered for path 'drone'
 Cloning into 'drone'...
-Submodule path 'drone': checked out '2530f8723f6c960d1ba389db4acaf5fe69d8550d'
+Submodule path 'drone': checked out '7ccc0e5f1344072f7d9f6799f75b87c9c1d13c46'
 + echo hi
 hi
-+ /usr/local/bin/docker daemon -g /var/lib/docker
++ /usr/local/bin/docker daemon -g /var/lib/docker -s aufs
+time="2016-06-18T17:50:24.840965100Z" level=info msg="New containerd process, pid: 21\n" 
+time="2016-06-18T17:50:25.879033907Z" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
+time="2016-06-18T17:50:25.880273168Z" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: can't change directory to '/lib/modules': No such file or directory\n, error: exit status 1" 
+time="2016-06-18T17:50:25.881114428Z" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-18T17:50:25.881918998Z" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-18T17:50:25.920394174Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address" 
+time="2016-06-18T17:50:26.021316197Z" level=warning msg="Your kernel does not support swap memory limit." 
+time="2016-06-18T17:50:26.021748246Z" level=info msg="Loading containers: start." 
+null
+time="2016-06-18T17:50:26.021826801Z" level=info msg="Loading containers: done." 
+time="2016-06-18T17:50:26.021845574Z" level=info msg="Daemon has completed initialization" 
+time="2016-06-18T17:50:26.021865135Z" level=info msg="Docker daemon" commit=5604cbe graphdriver=aufs version=1.11.1 
+time="2016-06-18T17:50:26.033269422Z" level=info msg="API listen on /var/run/docker.sock" 
+time="2016-06-18T17:50:26.040972025Z" level=error msg="Couldn't run auplink before unmount /var/lib/docker/tmp/docker-aufs-union975326547: exec: \"auplink\": executable file not found in $PATH" 
 Error authenticating: exit status 1
