@@ -7,7 +7,7 @@ pipeline:
     debug: true
     repo: vespakoen/drone-docker-compose
     tag: development
-    storage_driver: overlay
+    storage_driver: vfs
     # email: k.schmeets@gmail.com
     # insecure: true
     # environment:
