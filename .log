@@ -5,15 +5,25 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q d35c5b886f6e329d24b0b9f0951a6cd3dbc16e67
++ git reset --hard -q 3151c71a816c427b697620f40bdf694ca87470aa
 + git submodule update --init --recursive
 Submodule 'drone' (https://github.com/vespakoen/drone.git) registered for path 'drone'
 Cloning into 'drone'...
 Submodule path 'drone': checked out '7ccc0e5f1344072f7d9f6799f75b87c9c1d13c46'
 + echo hi
 hi
-+ /usr/local/bin/docker daemon -g /var/lib/docker -s overlay
-time="2016-06-18T17:52:22.876876876Z" level=info msg="New containerd process, pid: 22\n" 
-time="2016-06-18T17:52:23.878905293Z" level=error msg="'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded." 
-time="2016-06-18T17:52:23.878996149Z" level=fatal msg="Error starting daemon: error initializing graphdriver: driver not supported" 
++ /usr/local/bin/docker daemon -g /var/lib/docker -s vfs
+time="2016-06-18T17:58:47.105601627Z" level=info msg="New containerd process, pid: 22\n" 
+time="2016-06-18T17:58:48.145427339Z" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
+time="2016-06-18T17:58:48.146626085Z" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: can't change directory to '/lib/modules': No such file or directory\n, error: exit status 1" 
+time="2016-06-18T17:58:48.147476907Z" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-18T17:58:48.148180422Z" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-18T17:58:48.185922234Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address" 
+time="2016-06-18T17:58:48.282663465Z" level=warning msg="Your kernel does not support swap memory limit." 
+time="2016-06-18T17:58:48.283119931Z" level=info msg="Loading containers: start." 
+null
+time="2016-06-18T17:58:48.283174454Z" level=info msg="Loading containers: done." 
+time="2016-06-18T17:58:48.283188956Z" level=info msg="Daemon has completed initialization" 
+time="2016-06-18T17:58:48.283206064Z" level=info msg="Docker daemon" commit=5604cbe graphdriver=vfs version=1.11.1 
+time="2016-06-18T17:58:48.293604650Z" level=info msg="API listen on /var/run/docker.sock" 
 Error authenticating: exit status 1
