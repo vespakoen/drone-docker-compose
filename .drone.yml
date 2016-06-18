@@ -20,6 +20,8 @@ pipeline:
     repo: vespakoen/drone
     tag: ["latest", "0.5.1"]
     storage_driver: vfs
+    context: drone
+    dockerfile: drone/Dockerfile
     # insecure: true
   build:
     image: drone/golang:1.5
@@ -39,4 +41,6 @@ pipeline:
     repo: vespakoen/drone-docker
     tag: ["latest", "0.5.1"]
     storage_driver: vfs
+    context: drone-docker
+    dockerfile: drone-docker/Dockerfile
     # insecure: true
