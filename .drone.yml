@@ -9,5 +9,3 @@ pipeline:
     tag: development
     storage_driver: vfs
     insecure: true
-    environment:
-      PLUGIN_DNS: "127.0.1.1"
