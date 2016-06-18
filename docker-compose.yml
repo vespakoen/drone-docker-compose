@@ -3,7 +3,7 @@ services:
   drone:
     image: drone/drone:0.5
     restart: always
-    # privileged: true
+    privileged: true
     environment:
       DRONE_GITHUB: "true"
       DRONE_GITHUB_CLIENT: $DRONE_GITHUB_CLIENT
