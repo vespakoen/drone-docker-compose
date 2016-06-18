@@ -15,7 +15,8 @@ pipeline:
       - make deps
       - make gen
       - make build
-  docker:
+  mydocker:
+    image: vespakoen/drone-docker:0.5.1
     debug: true
     repo: vespakoen/drone
     tag: ["latest", "0.5.1"]
