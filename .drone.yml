@@ -1,5 +1,7 @@
 pipeline:
-  docker:
-    repo: vespakoen/drone-docker-compose
-    tag: development
+  build:
+    image: test
+  # docker:
+  #   repo: vespakoen/drone-docker-compose
+  #   tag: development
 
