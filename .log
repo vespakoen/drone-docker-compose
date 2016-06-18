@@ -5,8 +5,11 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q c198e2796713ca3674c6fad432946ba3008fba72
++ git reset --hard -q 894f101c7056e97c65b47ae51a66eba8412ddaaa
 + git submodule update --init --recursive
+Submodule 'drone' (https://github.com/vespakoen/drone.git) registered for path 'drone'
+Cloning into 'drone'...
+Submodule path 'drone': checked out '2530f8723f6c960d1ba389db4acaf5fe69d8550d'
 + echo hi
 hi
 + /usr/local/bin/docker daemon -g /var/lib/docker
