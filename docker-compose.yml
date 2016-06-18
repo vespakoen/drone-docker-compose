@@ -1,7 +1,7 @@
 version: '2'
 services:
   drone:
-    image: vespakoen/drone:latest
+    image: vespakoen/drone:0.5.1
     # build:
     #   dockerfile: Dockerfile
     #   context: ./drone
