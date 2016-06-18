@@ -8,8 +8,5 @@ pipeline:
     tag: development
     auth: 3275892h2u39482h35
     insecure: true
-    registry: localhost:5000
-    username: username
-    password: password
     environment:
       - DOCKER_LAUNCH_DEBUG="true"
