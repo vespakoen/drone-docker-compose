@@ -14,7 +14,7 @@ pipeline:
       - GOPATH=/drone
     commands:
       - export PATH=$PATH:$GOPATH/bin
-      - cd drone && make build
+      - cd drone && pwd && make build
   docker:
     debug: true
     repo: vespakoen/drone
