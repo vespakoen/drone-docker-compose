@@ -10,3 +10,6 @@ else
   git commit -am "Trigger build #$(cat .build)"
 fi
 git push origin master
+echo "Waiting for log to complete, hit enter when done."
+read _
+./log.sh > .log
