@@ -3,7 +3,7 @@ services:
   drone:
     image: drone/drone:0.5
     restart: always
-    privileged: true
+    # privileged: true
     environment:
       DRONE_GITHUB: "true"
       DRONE_GITHUB_CLIENT: $DRONE_GITHUB_CLIENT
@@ -17,11 +17,11 @@ services:
       - "8000:8000"
     volumes:
      - "/drone:/var/lib/drone"
-     - "/var/run/docker.sock:/var/run/docker.sock"
+    #  - "/var/run/docker.sock:/var/run/docker.sock"
   drone-agent:
     image: drone/agent:0.5
     restart: always
-    privileged: true
+    # privileged: true
     environment:
       DRONE_SERVER: http://drone:8000
       DRONE_SECRET: $DRONE_AGENT_SECRET
@@ -32,8 +32,8 @@ services:
       DRONE_DEBUG: "true"
     links:
       - drone
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
+    # volumes:
+    #   - "/var/run/docker.sock:/var/run/docker.sock"
   registry:
     image: registry:2.4.1
     environment:
