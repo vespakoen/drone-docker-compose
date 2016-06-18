@@ -3,7 +3,7 @@
 . ./env.sh
 
 function add_secret {
-  ./release/linux/amd64/drone -t $DRONE_USER_TOKEN -s http://localhost:8000 secret add --image=vespakoen/drone-docker vespakoen/drone-docker-compose $1 $2
+  ./release/linux/amd64/drone -t $DRONE_USER_TOKEN -s http://localhost:8000 secret add --image=vespakoen/drone-docker:0.5.1 vespakoen/drone-docker-compose $1 $2
 }
 
 function rm_secret {
