@@ -29,25 +29,10 @@ export DOCKER_REGISTRY_URL=YOUR_DOCKER_REGISTRY_URL
 ./up.sh
 ```
 
-**Add the secrets:**
-
-```shell
-./add_secrets.sh
-```
-
 **Trigger a build:**
 
 Increments a build number and pushes to github.
 
 ```shell
 ./trigger_build.sh
-```
-
-**Get a build log:**
-
-```shell
-# last log
-./log.sh
-# specific log (by drone build number)
-./log 21
 ```
