@@ -3,7 +3,7 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
-  build:
+  drone-build:
     image: drone/golang:1.5
     environment:
       - GO15VENDOREXPERIMENT=1
@@ -15,7 +15,8 @@ pipeline:
       - make deps
       - make gen
       - make build
-  docker:
+  drone-publish:
+    image: vespakoen/drone-docker:0.5.1
     debug: true
     repo: vespakoen/drone
     tag: ["latest", "0.5.1"]
@@ -23,7 +24,7 @@ pipeline:
     context: drone
     dockerfile: drone/Dockerfile
     # insecure: true
-  build:
+  drone-docker-build:
     image: drone/golang:1.5
     environment:
       - GO15VENDOREXPERIMENT=1
@@ -36,7 +37,8 @@ pipeline:
       - export GOARCH=amd64
       - export CGO_ENABLED=0
       - make all
-  docker:
+  drone-docker-docker:
+    image: vespakoen/drone-docker:0.5.1
     debug: true
     repo: vespakoen/drone-docker
     tag: ["latest", "0.5.1"]
