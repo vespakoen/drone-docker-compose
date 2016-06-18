@@ -29,7 +29,7 @@ pipeline:
     image: drone/golang:1.5
     environment:
       - GO15VENDOREXPERIMENT=1
-      - GOPATH=/drone-docker
+      - GOPATH=/drone
     commands:
       - cd drone-docker
       - pwd
