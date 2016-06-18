@@ -8,7 +8,6 @@ pipeline:
     repo: vespakoen/drone-docker-compose
     tag: development
     storage_driver: vfs
-    # email: k.schmeets@gmail.com
     # insecure: true
     # environment:
       # - DOCKER_LAUNCH_DEBUG="true"
