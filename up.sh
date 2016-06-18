@@ -1,3 +1,5 @@
+#!/bin/bash
+
 . ./env.sh
 
 if [ "$1" == "--rebuild" ]; then

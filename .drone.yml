@@ -4,6 +4,7 @@ pipeline:
     commands:
       - echo hi
   docker:
+    debug: true
     repo: vespakoen/drone-docker-compose
     tag: development
     # email: k.schmeets@gmail.com
