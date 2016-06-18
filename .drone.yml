@@ -8,5 +8,5 @@ pipeline:
     tag: development
     # email: k.schmeets@gmail.com
     # insecure: true
-    environment:
-      - DOCKER_LAUNCH_DEBUG="true"
+    # environment:
+      # - DOCKER_LAUNCH_DEBUG="true"
