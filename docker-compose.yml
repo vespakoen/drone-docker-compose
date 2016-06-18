@@ -32,8 +32,6 @@ services:
       DRONE_DEBUG: "true"
     links:
       - drone
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
   registry:
     image: registry:2.4.1
     environment:

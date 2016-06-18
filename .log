@@ -5,7 +5,7 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q 5cf405fac8fcef9e7725abf107adabc866527f81
++ git reset --hard -q 68881df63434dc575b046f2be1b3fb8e09b104e1
 + git submodule update --init --recursive
 + echo hi
 hi
@@ -16,8 +16,8 @@ Client:
  Version:      1.11.1
  API version:  1.23
  Go version:   go1.5.4
-Cannot connect to the Docker daemon. Is the docker daemon running on this host?
  Git commit:   5604cbe
  Built:        Wed Apr 27 00:34:20 2016
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
  OS/Arch:      linux/amd64
 exit status 1
