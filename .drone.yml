@@ -1,11 +1,23 @@
+workspace:
+  base: /drone
+  path: src/github.com/drone
+
 pipeline:
+  # build:
+  #   image: busybox
+  #   commands:
+  #     - echo hi
   build:
-    image: busybox
+    image: drone/golang:1.5
+    environment:
+      - GO15VENDOREXPERIMENT=1
+      - GOPATH=/drone/drone
     commands:
-      - echo hi
+      - export PATH=$PATH:$GOPATH/bin
+      - make build
   docker:
     debug: true
-    repo: vespakoen/drone-docker-compose
+    repo: vespakoen/drone
     tag: development
     storage_driver: vfs
     # insecure: true
