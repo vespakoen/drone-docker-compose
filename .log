@@ -5,25 +5,103 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q 3151c71a816c427b697620f40bdf694ca87470aa
++ git reset --hard -q 42df9380e3e097ce7fc65fb186c8e99dde7c3128
 + git submodule update --init --recursive
 Submodule 'drone' (https://github.com/vespakoen/drone.git) registered for path 'drone'
+Submodule 'drone-docker' (https://github.com/drone-plugins/drone-docker.git) registered for path 'drone-docker'
 Cloning into 'drone'...
 Submodule path 'drone': checked out '7ccc0e5f1344072f7d9f6799f75b87c9c1d13c46'
+Cloning into 'drone-docker'...
+Submodule path 'drone-docker': checked out '74289a486c00077bc3e91cda8ce064adb90617da'
 + echo hi
 hi
 + /usr/local/bin/docker daemon -g /var/lib/docker -s vfs
-time="2016-06-18T17:58:47.105601627Z" level=info msg="New containerd process, pid: 22\n" 
-time="2016-06-18T17:58:48.145427339Z" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
-time="2016-06-18T17:58:48.146626085Z" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: can't change directory to '/lib/modules': No such file or directory\n, error: exit status 1" 
-time="2016-06-18T17:58:48.147476907Z" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
-time="2016-06-18T17:58:48.148180422Z" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
-time="2016-06-18T17:58:48.185922234Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address" 
-time="2016-06-18T17:58:48.282663465Z" level=warning msg="Your kernel does not support swap memory limit." 
-time="2016-06-18T17:58:48.283119931Z" level=info msg="Loading containers: start." 
+time="2016-06-18T18:28:02.412461115Z" level=info msg="New containerd process, pid: 21\n" 
+time="2016-06-18T18:28:03.449673675Z" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
+time="2016-06-18T18:28:03.450452019Z" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: can't change directory to '/lib/modules': No such file or directory\n, error: exit status 1" 
+time="2016-06-18T18:28:03.451019514Z" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-18T18:28:03.451621323Z" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-18T18:28:03.486647150Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address" 
+time="2016-06-18T18:28:03.582497338Z" level=warning msg="Your kernel does not support swap memory limit." 
+time="2016-06-18T18:28:03.582854343Z" level=info msg="Loading containers: start." 
+time="2016-06-18T18:28:03.582895337Z" level=info msg="Loading containers: done." 
 null
-time="2016-06-18T17:58:48.283174454Z" level=info msg="Loading containers: done." 
-time="2016-06-18T17:58:48.283188956Z" level=info msg="Daemon has completed initialization" 
-time="2016-06-18T17:58:48.283206064Z" level=info msg="Docker daemon" commit=5604cbe graphdriver=vfs version=1.11.1 
-time="2016-06-18T17:58:48.293604650Z" level=info msg="API listen on /var/run/docker.sock" 
-Error authenticating: exit status 1
+time="2016-06-18T18:28:03.582907557Z" level=info msg="Daemon has completed initialization" 
+time="2016-06-18T18:28:03.582921427Z" level=info msg="Docker daemon" commit=b9f10c9 graphdriver=vfs version=1.11.2 
+time="2016-06-18T18:28:03.592563451Z" level=info msg="API listen on /var/run/docker.sock" 
+Loggin in to registry with user: vespakoen and email: k.schmeets@gmail.com
++ /usr/local/bin/docker version
+Client:
+ Version:      1.11.2
+ API version:  1.23
+ Go version:   go1.5.4
+ Git commit:   b9f10c9
+ Built:        Wed Jun  1 21:20:08 2016
+ OS/Arch:      linux/amd64
+null
+Server:
+ Version:      1.11.2
+ API version:  1.23
+ Go version:   go1.5.4
+ Git commit:   b9f10c9
+ Built:        Wed Jun  1 21:20:08 2016
+ OS/Arch:      linux/amd64
++ /usr/local/bin/docker info
+Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
+Images: 0
+Server Version: 1.11.2
+Storage Driver: vfs
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
+Plugins: 
+ Volume: local
+ Network: null host bridge
+Kernel Version: 4.4.0-22-generic
+Operating System: Alpine Linux v3.4 (containerized)
+OSType: linux
+Architecture: x86_64
+CPUs: 8
+WARNING: No swap limit support
+WARNING: bridge-nf-call-iptables is disabled
+WARNING: bridge-nf-call-ip6tables is disabled
+Total Memory: 15.55 GiB
+Name: fca50056c5d3
+ID: LI4C:FTCN:3EBV:E2M5:QS5I:OUSF:CKC2:4LU3:IDHC:NO4O:FMQQ:BM2H
+Docker Root Dir: /var/lib/docker
+Debug mode (client): false
+Debug mode (server): false
+Registry: https://index.docker.io/v1/
++ /usr/local/bin/docker build --pull=true --rm=true -f Dockerfile -t 42df9380e3e097ce7fc65fb186c8e99dde7c3128 .
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon  62.4 MB
+Step 1 : FROM busybox
+latest: Pulling from library/busybox
+385e281300cc: Pulling fs layer
+a3ed95caeb02: Pulling fs layer
+a3ed95caeb02: Verifying Checksum
+a3ed95caeb02: Download complete
+385e281300cc: Verifying Checksum
+385e281300cc: Download complete
+385e281300cc: Pull complete
+a3ed95caeb02: Pull complete
+Digest: sha256:4a731fb46adc5cefe3ae374a8b6020fc1b6ad667a279647766e9a3cd89f6fa92
+Status: Downloaded newer image for busybox:latest
+ ---> 47bcc53f74dc
+Step 2 : RUN echo Hi!
+ ---> Running in ac771e3378a3
+Hi!
+time="2016-06-18T18:28:13.248000321Z" level=info msg="Layer sha256:c042884c582bf541a4d646be7cb3fcd0fe9c4db50396b79ed695702fe9936561 cleaned up" 
+ ---> 958bf7863d70
+Removing intermediate container ac771e3378a3
+Successfully built 958bf7863d70
++ /usr/local/bin/docker tag 42df9380e3e097ce7fc65fb186c8e99dde7c3128 vespakoen/drone-docker-compose:development
++ /usr/local/bin/docker push vespakoen/drone-docker-compose:development
+The push refers to a repository [docker.io/vespakoen/drone-docker-compose]
+5f70bf18a086: Preparing
+1834950e52ce: Preparing
+time="2016-06-18T18:28:16.213028458Z" level=error msg="Upload failed: unauthorized: authentication required" 
+time="2016-06-18T18:28:16.213108474Z" level=error msg="Attempting next endpoint for push after error: unauthorized: authentication required" 
+unauthorized: authentication required
+exit status 1
