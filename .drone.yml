@@ -6,7 +6,6 @@ pipeline:
   docker:
     repo: vespakoen/drone-docker-compose
     tag: development
-    auth: 3275892h2u39482h35
     # insecure: true
     environment:
       - DOCKER_LAUNCH_DEBUG="true"

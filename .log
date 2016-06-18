@@ -5,9 +5,9 @@ Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q b9e7058195458dcce5a21d4b623e8e3aed33bdd8
++ git reset --hard -q 4f4c2b8d0f094eb1bfaed6bf0814b5b58dc1a060
 + git submodule update --init --recursive
 + echo hi
 hi
-+ /usr/local/bin/docker daemon -g /var/lib/docker --insecure-registry registry.docker.io
++ /usr/local/bin/docker daemon -g /var/lib/docker
 Error authenticating: exit status 1
