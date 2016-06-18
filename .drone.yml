@@ -11,4 +11,4 @@ pipeline:
     insecure: true
     environment:
       PLUGIN_DNS: "127.0.0.11"
-      PLUGIN_BIP: "bridge0"
+      PLUGIN_BIP: "docker0"
