@@ -3,6 +3,7 @@
 echo "Enter a commit message or [enter] for auto message."
 read commit_message
 echo $(expr $(cat .build) + 1) > .build
+./sign_yaml.sh
 git add .
 if [ ! -z "$commit_message" ]; then
   git commit -am "$commit_message"
