@@ -3,4 +3,4 @@
 	url = https://github.com/vespakoen/drone.git
 [submodule "drone-docker"]
 	path = drone-docker
-	url = https://github.com/drone-plugins/drone-docker.git
+	url = https://github.com/vespakoen/drone-docker.git
