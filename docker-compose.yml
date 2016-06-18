@@ -16,6 +16,7 @@ services:
       - "8000:8000"
     volumes:
      - "/drone:/var/lib/drone"
+     - "/var/run/docker.sock:/var/run/docker.sock"
   drone-agent:
     image: drone/agent:0.5
     restart: always
@@ -29,6 +30,8 @@ services:
       I_AGREE_TO_FIX_BUGS_AND_NOT_FILE_BUGS: "true"
     links:
       - drone
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
   registry:
     image: registry:2.4.1
     environment:
