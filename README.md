@@ -35,6 +35,13 @@ export DOCKER_REGISTRY_PASSWORD=YOUR_DOCKER_REGISTRY_PASSWORD
 export DOCKER_REGISTRY_HTTP_SECRET=INSERT_RANDOM_LONG_STRONG_HERE
 ```
 
+**Symlink drone into gopath**
+
+```shell
+mkdir -p $GOPATH/src/github.com/drone
+ln -s /path/to/this/project/drone $GOPATH/src/github.com/drone/drone
+```
+
 **Start drone + 1 drone agent:**
 
 ```shell
