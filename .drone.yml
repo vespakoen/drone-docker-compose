@@ -9,5 +9,3 @@ pipeline:
     tag: development
     storage_driver: vfs
     insecure: true
-    # environment:
-      # - DOCKER_LAUNCH_DEBUG="true"
