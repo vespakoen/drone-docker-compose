@@ -1,11 +1,14 @@
 Attaching to dronedockercompose_drone-agent_1, dronedockercompose_drone_1, dronedockercompose_registry_1
-[36mdrone-agent_1  |[0m time="2016-06-18T03:35:02Z" level=info msg="Connecting to http://drone:8000 with token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoiIiwidHlwZSI6ImFnZW50In0.EJtowfTD-4ygS4Sggefw9qKyFeRXuv0v69k_s-xdAXU" 
-[36mdrone-agent_1  |[0m time="2016-06-18T03:35:05Z" level=info msg="Starting build vespakoen/drone-docker-compose#41.1" 
-[36mdrone-agent_1  |[0m time="2016-06-18T03:35:05Z" level=info msg="Finished build vespakoen/drone-docker-compose#41.1" 
-[36mdrone-agent_1  |[0m time="2016-06-18T03:35:12Z" level=info msg="Starting build vespakoen/drone-docker-compose#41.1" 
-[36mdrone-agent_1  |[0m time="2016-06-18T03:35:13Z" level=info msg="Finished build vespakoen/drone-docker-compose#41.1" 
+[36mdrone-agent_1  |[0m time="2016-06-18T03:36:33Z" level=info msg="Connecting to http://drone:8000 with token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoiIiwidHlwZSI6ImFnZW50In0.EJtowfTD-4ygS4Sggefw9qKyFeRXuv0v69k_s-xdAXU" 
+[36mdrone-agent_1  |[0m time="2016-06-18T03:36:33Z" level=info msg="Starting build vespakoen/drone-docker-compose#42.1" 
+[36mdrone-agent_1  |[0m time="2016-06-18T03:36:47Z" level=info msg="Starting build vespakoen/drone-docker-compose#43.1" 
+[36mdrone-agent_1  |[0m time="2016-06-18T03:37:05Z" level=info msg="Finished build vespakoen/drone-docker-compose#42.1" 
+[36mdrone-agent_1  |[0m time="2016-06-18T03:37:06Z" level=info msg="Finished build vespakoen/drone-docker-compose#43.1" 
+[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:49Z" level=info msg="using agent secret 1n3iu23uihui23453632jn" 
+[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:49Z" level=warning msg="agents can connect with token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoiMW4zaXUyM3VpaHVpMjM0NTM2MzJqbiIsInR5cGUiOiJhZ2VudCJ9.GoNma0reEQzAYSrgzGkLDXUFBSFHWSLAJzpACkSvzvE" 
+[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="Starting upload purge in 3m0s" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
 [33mdrone_1        |[0m  - using env:	export GIN_MODE=release
 [33mdrone_1        |[0m  - using code:	gin.SetMode(gin.ReleaseMode)
@@ -15,222 +18,219 @@ Attaching to dronedockercompose_drone-agent_1, dronedockercompose_drone_1, drone
 [33mdrone_1        |[0m [GIN-debug] GET    /                         --> github.com/drone/drone/server.ShowIndex (17 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /repos                    --> github.com/drone/drone/server.ShowAllRepos (17 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /login                    --> github.com/drone/drone/server.ShowLogin (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="Starting upload purge in 3m0s" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /login/form               --> github.com/drone/drone/server.ShowLoginForm (17 handlers)
-[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:47 +0000] "GET / HTTP/1.1" 200 0 "" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] GET    /logout                   --> github.com/drone/drone/server.GetLogout (17 handlers)
-[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:47 +0000] "GET /favicon.ico HTTP/1.1" 404 19 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] GET    /settings/profile         --> github.com/drone/drone/server.ShowUser (18 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name       --> github.com/drone/drone/server.ShowRepo (20 handlers)
-[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:49 +0000] "GET / HTTP/1.1" 200 0 "" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/builds/:number --> github.com/drone/drone/server.ShowBuild (20 handlers)
-[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:51 +0000] "GET / HTTP/1.1" 200 0 "" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/builds/:number/:job --> github.com/drone/drone/server.ShowBuild (20 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/settings --> github.com/drone/drone/server.ShowRepoConf (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:21:39Z" level=info msg="PurgeUploads starting: olderThan=2016-06-11 01:21:39.584758855 +0000 UTC, actuallyDelete=true" 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/settings/encrypt --> github.com/drone/drone/server.ShowRepoEncrypt (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:21:39Z" level=info msg="Purge uploads finished.  Num deleted=0, num errors=1" 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/settings/badges --> github.com/drone/drone/server.ShowRepoBadges (20 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:21:39Z" level=info msg="Starting upload purge in 24h0m0s" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user                 --> github.com/drone/drone/server.GetSelf (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user/feed            --> github.com/drone/drone/server.GetFeed (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:18:39Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user/repos           --> github.com/drone/drone/server.GetRepos (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="Starting upload purge in 44m0s" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
+[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:47 +0000] "GET / HTTP/1.1" 200 0 "" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user/repos/remote    --> github.com/drone/drone/server.GetRemoteRepos (18 handlers)
+[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:47 +0000] "GET /favicon.ico HTTP/1.1" 404 19 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] POST   /api/user/token           --> github.com/drone/drone/server.PostToken (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
+[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:49 +0000] "GET / HTTP/1.1" 200 0 "" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/user/token           --> github.com/drone/drone/server.DeleteToken (18 handlers)
+[32mregistry_1     |[0m 172.19.0.1 - - [18/Jun/2016:01:18:51 +0000] "GET / HTTP/1.1" 200 0 "" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
 [33mdrone_1        |[0m [GIN-debug] GET    /api/users                --> github.com/drone/drone/server.GetUsers (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T01:21:39Z" level=info msg="PurgeUploads starting: olderThan=2016-06-11 01:21:39.584758855 +0000 UTC, actuallyDelete=true" 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/users                --> github.com/drone/drone/server.PostUser (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:21:39Z" level=info msg="Purge uploads finished.  Num deleted=0, num errors=1" 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/users/:login         --> github.com/drone/drone/server.GetUser (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:21:39Z" level=info msg="Starting upload purge in 24h0m0s" go.version=go1.6.2 instance.id=d7ea9d82-c3c2-496d-bb1a-16a1c98e5168 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] PATCH  /api/users/:login         --> github.com/drone/drone/server.PatchUser (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/users/:login         --> github.com/drone/drone/server.DeleteUser (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="Starting upload purge in 41m0s" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name   --> github.com/drone/drone/server.PostRepo (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="Starting upload purge in 44m0s" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name   --> github.com/drone/drone/server.GetRepo (20 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name/builds --> github.com/drone/drone/server.GetBuilds (20 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T01:59:46Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=2e69831a-21c5-4451-b32f-50f6a77605c2 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name/builds/:number --> github.com/drone/drone/server.GetBuild (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name/logs/:number/:job --> github.com/drone/drone/server.GetBuildLogs (20 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/sign --> github.com/drone/drone/server.Sign (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="Starting upload purge in 8m0s" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/secrets --> github.com/drone/drone/server.PostSecret (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/repos/:owner/:name/secrets/:secret --> github.com/drone/drone/server.DeleteSecret (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] PATCH  /api/repos/:owner/:name   --> github.com/drone/drone/server.PatchRepo (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/repos/:owner/:name   --> github.com/drone/drone/server.DeleteRepo (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/chown --> github.com/drone/drone/server.ChownRepo (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="Starting upload purge in 38m0s" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/builds/:number --> github.com/drone/drone/server.PostBuild (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/repos/:owner/:name/builds/:number/:job --> github.com/drone/drone/server.DeleteBuild (21 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/badges/:owner/:name/status.svg --> github.com/drone/drone/server.GetBadge (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/badges/:owner/:name/cc.xml --> github.com/drone/drone/server.GetCC (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /hook                     --> github.com/drone/drone/server.PostHook (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="Starting upload purge in 47m0s" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/hook                 --> github.com/drone/drone/server.PostHook (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/stream/:owner/:name  --> github.com/drone/drone/server.GetRepoEvents (20 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/stream/:owner/:name/:build/:number --> github.com/drone/drone/server.GetStream (20 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /authorize                --> github.com/drone/drone/server.GetLogin (17 handlers)
 [33mdrone_1        |[0m [GIN-debug] POST   /authorize                --> github.com/drone/drone/server.GetLogin (17 handlers)
 [33mdrone_1        |[0m [GIN-debug] POST   /authorize/token          --> github.com/drone/drone/server.GetLoginToken (17 handlers)
+[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="Starting upload purge in 41m0s" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/builds               --> github.com/drone/drone/server.GetBuildQueue (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/agents               --> github.com/drone/drone/server.GetAgents (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T02:05:21Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=d9eafb46-cda1-4216-9484-1d2231264e2d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/pull           --> github.com/drone/drone/server.Pull (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/pull/:os/:arch --> github.com/drone/drone/server.Pull (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/wait/:id       --> github.com/drone/drone/server.Wait (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="Starting upload purge in 8m0s" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/stream/:id     --> github.com/drone/drone/server.Stream (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/status/:id     --> github.com/drone/drone/server.Update (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="Starting upload purge in 7m0s" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:11Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=a2acb03c-4e47-4a76-947e-875232a0522d version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/ping           --> github.com/drone/drone/server.Ping (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/queue/logs/:id       --> github.com/drone/drone/server.PostLogs (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/queue/logs/:id       --> github.com/drone/drone/server.WriteLogs (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="Starting upload purge in 38m0s" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:49Z" level=debug msg="Agent 172.19.0.4 connected." 
-[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:49Z" level=info ip=172.19.0.4 latency=34.61875ms method=POST path="/api/queue/ping" status=200 time="2016-06-18T03:18:49Z" user-agent="Go-http-client/1.1" 
-[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="Starting upload purge in 13m0s" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:06:31Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=d87db38d-78b2-49b1-b607-d0c1f9f8c801 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:50Z" level=debug msg="Agent 172.19.0.4 connected." 
-[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:58Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
-[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T02:31:26Z" level=info msg="PurgeUploads starting: olderThan=2016-06-11 02:31:26.747822351 +0000 UTC, actuallyDelete=true" 
+[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:58Z" level=info ip=172.19.0.1 latency=4.273828ms method=GET path="/repos/vespakoen/drone-docker-compose" status=200 time="2016-06-18T03:18:58Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
-[32mregistry_1     |[0m time="2016-06-18T02:31:26Z" level=info msg="Purge uploads finished.  Num deleted=0, num errors=1" 
-[32mregistry_1     |[0m time="2016-06-18T02:31:26Z" level=info msg="Starting upload purge in 24h0m0s" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="Starting upload purge in 47m0s" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:58Z" level=info ip=192.30.252.42 latency=1.921543359s method=POST path="/hook" status=200 time="2016-06-18T03:18:58Z" user-agent="GitHub-Hookshot/0b0c52f" 
-[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="Starting upload purge in 35m0s" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:58Z" level=debug msg="Agent 172.19.0.4 assigned work. vespakoen/drone-docker-compose#33.1" 
-[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:07:04Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=eaa26b77-8e2b-4d33-86d3-fa871583faa9 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:58Z" level=info ip=172.19.0.4 latency=9.162049622s method=POST path="/api/queue/pull/linux/amd64" status=202 time="2016-06-18T03:18:58Z" user-agent="Go-http-client/1.1" 
-[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:58Z" level=info ip=172.19.0.4 latency=53.96266ms method=POST path="/api/queue/status/33" status=200 time="2016-06-18T03:18:58Z" user-agent="Go-http-client/1.1" 
+[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.4 latency=220.237967ms method=POST path="/api/queue/status/33" status=200 time="2016-06-18T03:18:59Z" user-agent="Go-http-client/1.1" 
-[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="Starting upload purge in 32m0s" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="Starting upload purge in 7m0s" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.4 latency=22.951128ms method=POST path="/api/queue/logs/33" status=200 time="2016-06-18T03:18:59Z" user-agent="Go-http-client/1.1" 
-[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] [WARNING] Headers were already written. Wanted to override status code 200 with 500
-[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:16:29Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=824cb3d4-f845-4fe0-9740-1364e9203471 version=v2.4.1 
 [33mdrone_1        |[0m http: response.Write on hijacked connection
-[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.4 latency=307.962047ms method=GET path="/api/queue/logs/33" status=500 time="2016-06-18T03:18:59Z" user-agent="Go-http-client/1.1" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.4 latency=307.456483ms method=POST path="/api/queue/wait/33" status=200 time="2016-06-18T03:18:59Z" user-agent="Go-http-client/1.1" 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=debug msg="Agent 172.19.0.4 connected." 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="Starting upload purge in 6m0s" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.1 latency=2.016272ms method=GET path="/repos/vespakoen/drone-docker-compose/builds/33" status=200 time="2016-06-18T03:18:59Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.1 latency=636.657µs method=GET path="/api/repos/vespakoen/drone-docker-compose/logs/33/1" status=200 time="2016-06-18T03:18:59Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="Starting upload purge in 10m0s" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
-[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info msg="closed event stream" 
-[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:18:59Z" level=info ip=172.19.0.1 latency=1.000689774s method=GET path="/api/stream/vespakoen/drone-docker-compose" status=200 time="2016-06-18T03:18:59Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
-[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
 [33mdrone_1        |[0m http: multiple response.WriteHeader calls
-[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="Starting upload purge in 55m0s" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="Starting upload purge in 13m0s" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:20:21Z" level=info msg="using agent secret 1n3iu23uihui23453632jn" 
-[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:18:26Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
 [33mdrone_1        |[0m time="2016-06-18T03:20:21Z" level=warning msg="agents can connect with token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoiMW4zaXUyM3VpaHVpMjM0NTM2MzJqbiIsInR5cGUiOiJhZ2VudCJ9.GoNma0reEQzAYSrgzGkLDXUFBSFHWSLAJzpACkSvzvE" 
-[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:31:26Z" level=info msg="PurgeUploads starting: olderThan=2016-06-11 02:31:26.747822351 +0000 UTC, actuallyDelete=true" 
+[32mregistry_1     |[0m time="2016-06-18T02:31:26Z" level=info msg="Purge uploads finished.  Num deleted=0, num errors=1" 
+[32mregistry_1     |[0m time="2016-06-18T02:31:26Z" level=info msg="Starting upload purge in 24h0m0s" go.version=go1.6.2 instance.id=a34e0f88-a8c8-4444-b55e-b9bf7aa4582a version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
-[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
 [33mdrone_1        |[0m  - using env:	export GIN_MODE=release
-[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
 [33mdrone_1        |[0m  - using code:	gin.SetMode(gin.ReleaseMode)
-[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="Starting upload purge in 8m0s" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="Starting upload purge in 35m0s" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
 [33mdrone_1        |[0m 
-[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /static/*filepath         --> github.com/drone/drone/vendor/github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (2 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T02:53:56Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=4dd1dc91-bb75-40ff-9e6a-e0c9a6102a57 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] HEAD   /static/*filepath         --> github.com/drone/drone/vendor/github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (2 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /                         --> github.com/drone/drone/server.ShowIndex (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos                    --> github.com/drone/drone/server.ShowAllRepos (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="Starting upload purge in 4m0s" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="Starting upload purge in 32m0s" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /login                    --> github.com/drone/drone/server.ShowLogin (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /login/form               --> github.com/drone/drone/server.ShowLoginForm (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /logout                   --> github.com/drone/drone/server.GetLogout (17 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
-[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="Starting upload purge in 19m0s" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /settings/profile         --> github.com/drone/drone/server.ShowUser (18 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:14:52Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=77c154b0-1642-438e-b5db-9c768067504e version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name       --> github.com/drone/drone/server.ShowRepo (20 handlers)
-[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/builds/:number --> github.com/drone/drone/server.ShowBuild (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/builds/:number/:job --> github.com/drone/drone/server.ShowBuild (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/settings --> github.com/drone/drone/server.ShowRepoConf (21 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="Starting upload purge in 6m0s" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/settings/encrypt --> github.com/drone/drone/server.ShowRepoEncrypt (21 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /repos/:owner/:name/settings/badges --> github.com/drone/drone/server.ShowRepoBadges (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:01Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=102a679d-b8b0-46aa-a19a-71cb01c3ed25 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user                 --> github.com/drone/drone/server.GetSelf (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user/feed            --> github.com/drone/drone/server.GetFeed (18 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user/repos           --> github.com/drone/drone/server.GetRepos (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/user/repos/remote    --> github.com/drone/drone/server.GetRemoteRepos (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="Starting upload purge in 10m0s" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/user/token           --> github.com/drone/drone/server.PostToken (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:18:49Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=a09759f2-5b3c-4f10-93e6-e41785618078 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/user/token           --> github.com/drone/drone/server.DeleteToken (18 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /api/users                --> github.com/drone/drone/server.GetUsers (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/users                --> github.com/drone/drone/server.PostUser (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/users/:login         --> github.com/drone/drone/server.GetUser (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="Starting upload purge in 55m0s" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] PATCH  /api/users/:login         --> github.com/drone/drone/server.PatchUser (18 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/users/:login         --> github.com/drone/drone/server.DeleteUser (18 handlers)
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name   --> github.com/drone/drone/server.PostRepo (17 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name   --> github.com/drone/drone/server.GetRepo (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:20:21Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=cc900145-f582-4a51-84b1-a7e92667921a version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name/builds --> github.com/drone/drone/server.GetBuilds (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name/builds/:number --> github.com/drone/drone/server.GetBuild (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="Starting upload purge in 8m0s" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/repos/:owner/:name/logs/:number/:job --> github.com/drone/drone/server.GetBuildLogs (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/sign --> github.com/drone/drone/server.Sign (21 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:04Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=968856b5-63f3-42f4-8535-6cea6de9c0a5 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/secrets --> github.com/drone/drone/server.PostSecret (21 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/repos/:owner/:name/secrets/:secret --> github.com/drone/drone/server.DeleteSecret (21 handlers)
 [33mdrone_1        |[0m [GIN-debug] PATCH  /api/repos/:owner/:name   --> github.com/drone/drone/server.PatchRepo (21 handlers)
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/repos/:owner/:name   --> github.com/drone/drone/server.DeleteRepo (21 handlers)
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/chown --> github.com/drone/drone/server.ChownRepo (21 handlers)
 [33mdrone_1        |[0m [GIN-debug] POST   /api/repos/:owner/:name/builds/:number --> github.com/drone/drone/server.PostBuild (21 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] DELETE /api/repos/:owner/:name/builds/:number/:job --> github.com/drone/drone/server.DeleteBuild (21 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /api/badges/:owner/:name/status.svg --> github.com/drone/drone/server.GetBadge (17 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="Starting upload purge in 4m0s" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/badges/:owner/:name/cc.xml --> github.com/drone/drone/server.GetCC (17 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /hook                     --> github.com/drone/drone/server.PostHook (17 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:21:07Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=e41e5219-81b7-47cd-9a44-0835b15dee14 version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] POST   /api/hook                 --> github.com/drone/drone/server.PostHook (17 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=warning msg="No HTTP secret provided - generated random secret. This may cause problems with uploads if multiple registries are behind a load-balancer. To provide a shared secret, fill in http.secret in the configuration file or set the REGISTRY_HTTP_SECRET environment variable." go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/stream/:owner/:name  --> github.com/drone/drone/server.GetRepoEvents (20 handlers)
+[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="redis not configured" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="Starting upload purge in 19m0s" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="using inmemory blob descriptor cache" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
+[32mregistry_1     |[0m time="2016-06-18T03:22:00Z" level=info msg="listening on [::]:5000" go.version=go1.6.2 instance.id=8ed849a4-12c6-4169-bbc0-fec605b0dbae version=v2.4.1 
 [33mdrone_1        |[0m [GIN-debug] GET    /api/stream/:owner/:name/:build/:number --> github.com/drone/drone/server.GetStream (20 handlers)
 [33mdrone_1        |[0m [GIN-debug] GET    /authorize                --> github.com/drone/drone/server.GetLogin (17 handlers)
 [33mdrone_1        |[0m [GIN-debug] POST   /authorize                --> github.com/drone/drone/server.GetLogin (17 handlers)
@@ -660,3 +660,48 @@ Attaching to dronedockercompose_drone-agent_1, dronedockercompose_drone_1, drone
 [33mdrone_1        |[0m time="2016-06-18T03:35:13Z" level=debug msg="Agent 172.19.0.4 connected." 
 [33mdrone_1        |[0m time="2016-06-18T03:35:13Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
 [33mdrone_1        |[0m time="2016-06-18T03:35:13Z" level=error msg="Error #01: stream: cannot read stream 41, not found\n" ip=172.19.0.1 latency=1.000930559s method=GET path="/api/stream/vespakoen/drone-docker-compose/41/1" status=404 time="2016-06-18T03:35:13Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:32Z" level=debug msg="Agent 172.19.0.4 could not pull work." 
+[33mdrone_1        |[0m time="2016-06-18T03:36:32Z" level=info ip=172.19.0.4 latency=1m27.432233338s method=POST path="/api/queue/pull/linux/amd64" status=200 time="2016-06-18T03:36:32Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:32Z" level=debug msg="Agent 172.19.0.4 could not pull work." 
+[33mdrone_1        |[0m time="2016-06-18T03:36:32Z" level=info ip=172.19.0.4 latency=1m19.713634448s method=POST path="/api/queue/pull/linux/amd64" status=200 time="2016-06-18T03:36:32Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:33Z" level=info ip=192.30.252.46 latency=2.002267832s method=POST path="/hook" status=200 time="2016-06-18T03:36:33Z" user-agent="GitHub-Hookshot/0b0c52f" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:33Z" level=debug msg="Agent 172.19.0.4 connected." 
+[33mdrone_1        |[0m time="2016-06-18T03:36:33Z" level=debug msg="Agent 172.19.0.4 connected." 
+[33mdrone_1        |[0m time="2016-06-18T03:36:33Z" level=debug msg="Agent 172.19.0.4 assigned work. vespakoen/drone-docker-compose#42.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:33Z" level=info ip=172.19.0.4 latency=406.348µs method=POST path="/api/queue/pull/linux/amd64" status=202 time="2016-06-18T03:36:33Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:33Z" level=info ip=172.19.0.4 latency=35.847471ms method=POST path="/api/queue/ping" status=200 time="2016-06-18T03:36:33Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:34Z" level=info ip=172.19.0.4 latency=55.16936ms method=POST path="/api/queue/status/42" status=200 time="2016-06-18T03:36:34Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:38Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:38Z" level=info ip=172.19.0.1 latency=28.000401ms method=POST path="/api/repos/vespakoen/drone-docker-compose/secrets" status=200 time="2016-06-18T03:36:38Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:47Z" level=info ip=192.30.252.41 latency=2.594264503s method=POST path="/hook" status=200 time="2016-06-18T03:36:47Z" user-agent="GitHub-Hookshot/0b0c52f" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:47Z" level=debug msg="Agent 172.19.0.4 assigned work. vespakoen/drone-docker-compose#43.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:47Z" level=info ip=172.19.0.4 latency=14.543533703s method=POST path="/api/queue/pull/linux/amd64" status=202 time="2016-06-18T03:36:47Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:47Z" level=info ip=172.19.0.4 latency=56.546939ms method=POST path="/api/queue/status/43" status=200 time="2016-06-18T03:36:47Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:57Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:57Z" level=info ip=172.19.0.1 latency=4.147642ms method=GET path="/repos/vespakoen/drone-docker-compose" status=200 time="2016-06-18T03:36:57Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:57Z" level=info msg="closed event stream" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:57Z" level=info ip=172.19.0.1 latency=1m47.207135615s method=GET path="/api/stream/vespakoen/drone-docker-compose" status=200 time="2016-06-18T03:36:57Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:57Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:58Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:58Z" level=info ip=172.19.0.1 latency=1.072794ms method=GET path="/repos/vespakoen/drone-docker-compose/builds/43" status=200 time="2016-06-18T03:36:58Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:58Z" level=info msg="closed event stream" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:58Z" level=info ip=172.19.0.1 latency=1.079249928s method=GET path="/api/stream/vespakoen/drone-docker-compose" status=200 time="2016-06-18T03:36:58Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
+[33mdrone_1        |[0m http: multiple response.WriteHeader calls
+[33mdrone_1        |[0m time="2016-06-18T03:36:59Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
+[33mdrone_1        |[0m time="2016-06-18T03:36:59Z" level=debug msg="vespakoen granted &{Pull:true Push:true Admin:true} permission to vespakoen/drone-docker-compose" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:05Z" level=info ip=172.19.0.4 latency=5.688170751s method=POST path="/api/queue/status/42" status=200 time="2016-06-18T03:37:05Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:05Z" level=info ip=172.19.0.4 latency=5.640539393s method=POST path="/api/queue/status/43" status=200 time="2016-06-18T03:37:05Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:05Z" level=info ip=172.19.0.4 latency=37.060319ms method=POST path="/api/queue/logs/42" status=200 time="2016-06-18T03:37:05Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m [GIN-debug] [WARNING] Headers were already written. Wanted to override status code 200 with 500
+[33mdrone_1        |[0m http: response.Write on hijacked connection
+[33mdrone_1        |[0m time="2016-06-18T03:37:05Z" level=info ip=172.19.0.4 latency=32.294979101s method=GET path="/api/queue/logs/42" status=500 time="2016-06-18T03:37:05Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:05Z" level=info ip=172.19.0.4 latency=31.293974836s method=POST path="/api/queue/wait/42" status=200 time="2016-06-18T03:37:05Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:05Z" level=debug msg="Agent 172.19.0.4 connected." 
+[33mdrone_1        |[0m time="2016-06-18T03:37:06Z" level=info ip=172.19.0.4 latency=1.030527177s method=POST path="/api/queue/logs/43" status=200 time="2016-06-18T03:37:06Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m [GIN-debug] [WARNING] Headers were already written. Wanted to override status code 200 with 500
+[33mdrone_1        |[0m http: response.Write on hijacked connection
+[33mdrone_1        |[0m time="2016-06-18T03:37:06Z" level=info ip=172.19.0.4 latency=18.75305957s method=GET path="/api/queue/logs/43" status=500 time="2016-06-18T03:37:06Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:06Z" level=debug msg="Closed stream vespakoen/drone-docker-compose#43" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:06Z" level=info ip=172.19.0.1 latency=7.575272449s method=GET path="/api/stream/vespakoen/drone-docker-compose/43/1" status=200 time="2016-06-18T03:37:06Z" user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:06Z" level=info ip=172.19.0.4 latency=18.752501081s method=POST path="/api/queue/wait/43" status=200 time="2016-06-18T03:37:06Z" user-agent="Go-http-client/1.1" 
+[33mdrone_1        |[0m time="2016-06-18T03:37:06Z" level=debug msg="Agent 172.19.0.4 connected." 
