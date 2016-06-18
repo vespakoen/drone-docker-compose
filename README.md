@@ -3,6 +3,12 @@
 Trying to get drone 0.5 to work with docker compose.  
 Linux only at the moment.  
 
+# Requirements
+
+- docker & docker-compose
+- sqlite3
+- jq
+
 # Running it
 
 **Add an env.sh file:**
