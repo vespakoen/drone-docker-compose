@@ -65,3 +65,9 @@ Increments a build number and pushes to github.
 ```shell
 ./trigger_build.sh
 ```
+
+## Running with nginx
+
+Make sure to use the `nginx:alpine` image as the other ones [do not include support for Bcrypt](https://github.com/nginxinc/docker-nginx/issues/29) which is needed for the registry.
+
+https://github.com/docker/distribution/blob/master/docs/recipes/nginx.md
