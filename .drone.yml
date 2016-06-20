@@ -6,7 +6,8 @@ pipeline:
   ping:
     image: ubuntu
     commands:
-      - ssh cache:22
+      - apt-get update && apt-get install openssh-client
+      - ssh cache@cache
   sftp_cache:
     server: cache:22
     user: cache
