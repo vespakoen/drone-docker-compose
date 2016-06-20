@@ -14,6 +14,5 @@ else
   docker-compose stop
 fi
 docker-compose up -d
-sleep 8
 ./add_secrets.sh
 docker-compose logs -f
