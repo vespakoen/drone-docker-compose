@@ -4,9 +4,9 @@ workspace:
 
 pipeline:
   ping:
-    image: ubuntu
+    image: ubuntu:15.10
     commands:
-      - apt-get update && apt-get install openssh-client
+      - apt-get update && apt-get install -y openssh-client
       - ssh cache@cache
   sftp_cache:
     server: cache:22
