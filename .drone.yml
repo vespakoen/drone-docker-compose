@@ -30,7 +30,7 @@ pipeline:
       - GOPATH=/drone
     commands:
       - export PATH=$PATH:$GOPATH/bin
-      - cd brads-drone
+      - mv brads-drone drone
       - pwd
       - make deps
       - make gen
@@ -41,8 +41,8 @@ pipeline:
     repo: vespakoen/brads-drone
     tag: ["latest", "0.5.1"]
     storage_driver: vfs
-    context: brads-drone
-    dockerfile: brads-drone/Dockerfile
+    context: drone
+    dockerfile: drone/Dockerfile
   drone-docker-build:
     image: drone/golang:1.5
     environment:
