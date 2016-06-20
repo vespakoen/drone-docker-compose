@@ -31,7 +31,8 @@ pipeline:
       - mv brads-drone drone
       - cd drone
       - pwd
-      - make deps_frontend
+      - npm -g install bower polymer-cli
+      - cd server/frontend && bower install
   brads-drone-build:
     image: drone/golang:1.5
     environment:
