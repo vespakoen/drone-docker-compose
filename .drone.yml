@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   sftp_cache:
-    server: cache:22
+    server: cache:2222
     user: cache
     password: cache
     mount: /drone/docker
@@ -74,7 +74,7 @@ pipeline:
     dockerfile: drone-docker/Dockerfile
   sftp_cache:
     mount: /drone/docker
-    server: cache:22
+    server: cache:2222
     user: cache
     password: cache
     rebuild: true
