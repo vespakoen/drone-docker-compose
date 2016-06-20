@@ -19,7 +19,7 @@ pipeline:
     image: vespakoen/drone-docker:0.5.1
     debug: true
     repo: vespakoen/drone
-    tag: ["latest", "0.5.1"]
+    tag: ["development"]
     storage_driver: vfs
     context: drone
     dockerfile: drone/Dockerfile
@@ -41,7 +41,7 @@ pipeline:
     image: vespakoen/drone-docker:0.5.1
     debug: true
     repo: vespakoen/brads-drone
-    tag: ["latest", "0.5.1"]
+    tag: ["development"]
     storage_driver: vfs
     context: drone
     dockerfile: drone/Dockerfile
@@ -62,7 +62,7 @@ pipeline:
     image: vespakoen/drone-docker:0.5.1
     debug: true
     repo: vespakoen/drone-docker
-    tag: ["latest", "0.5.1"]
+    tag: ["development"]
     storage_driver: vfs
     context: drone-docker
     dockerfile: drone-docker/Dockerfile
