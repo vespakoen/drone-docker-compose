@@ -6,7 +6,7 @@ pipeline:
   ping:
     image: busybox
     commands:
-      - ping cache
+      - ssh cache:22
   sftp_cache:
     server: cache:22
     user: cache
