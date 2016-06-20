@@ -3,11 +3,11 @@
 . ./env.sh
 
 function add_secret {
-  ./release/linux/amd64/drone -t $DRONE_USER_TOKEN -s http://localhost:8000 secret add --image=vespakoen/drone-docker:0.5.1 vespakoen/drone-docker-compose $1 $2
+  docker run -v $(pwd):/project --rm drone/drone:0.5 -s http://localhost:8000 -t $DRONE_USER_TOKEN secret add --image=vespakoen/drone-docker:0.5.1 waffleapp/waffleDev $1 $2
 }
 
 function rm_secret {
-  ./release/linux/amd64/drone -t $DRONE_USER_TOKEN -s http://localhost:8000 secret rm vespakoen/drone-docker-compose $1
+  docker run -v $(pwd):/project --rm drone/drone:0.5 -s http://localhost:8000 -t $DRONE_USER_TOKEN secret rm waffleapp/waffleDev $1
 }
 
 rm_secret DOCKER_EMAIL
