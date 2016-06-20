@@ -1,35 +1,75 @@
 + git init
-Initialized empty Git repository in /drone/src/github.com/vespakoen/drone-docker-compose/.git/
+Initialized empty Git repository in /drone/src/github.com/drone/.git/
 + git remote add origin https://github.com/vespakoen/drone-docker-compose.git
 + git fetch --no-tags origin +refs/heads/master:
 From https://github.com/vespakoen/drone-docker-compose
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> origin/master
-+ git reset --hard -q 42df9380e3e097ce7fc65fb186c8e99dde7c3128
++ git reset --hard -q 9ba22c61ffe892c78f26a59c856865a3784d6d41
 + git submodule update --init --recursive
+Submodule 'brads-drone' (https://github.com/bradrydzewski/drone.git) registered for path 'brads-drone'
 Submodule 'drone' (https://github.com/vespakoen/drone.git) registered for path 'drone'
-Submodule 'drone-docker' (https://github.com/drone-plugins/drone-docker.git) registered for path 'drone-docker'
+Submodule 'drone-docker' (https://github.com/vespakoen/drone-docker.git) registered for path 'drone-docker'
+Cloning into 'brads-drone'...
+Submodule path 'brads-drone': checked out '6d9ba206ad1ef3c43ad59e3d6ae17abbc027a4fc'
 Cloning into 'drone'...
-Submodule path 'drone': checked out '7ccc0e5f1344072f7d9f6799f75b87c9c1d13c46'
+Submodule path 'drone': checked out '9679d84b6730aebe19d7580d14d277376e8207dd'
 Cloning into 'drone-docker'...
-Submodule path 'drone-docker': checked out '74289a486c00077bc3e91cda8ce064adb90617da'
-+ echo hi
-hi
-+ /usr/local/bin/docker daemon -g /var/lib/docker -s vfs
-time="2016-06-18T18:28:02.412461115Z" level=info msg="New containerd process, pid: 21\n" 
-time="2016-06-18T18:28:03.449673675Z" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
-time="2016-06-18T18:28:03.450452019Z" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: can't change directory to '/lib/modules': No such file or directory\n, error: exit status 1" 
-time="2016-06-18T18:28:03.451019514Z" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
-time="2016-06-18T18:28:03.451621323Z" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
-time="2016-06-18T18:28:03.486647150Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address" 
-time="2016-06-18T18:28:03.582497338Z" level=warning msg="Your kernel does not support swap memory limit." 
-time="2016-06-18T18:28:03.582854343Z" level=info msg="Loading containers: start." 
-time="2016-06-18T18:28:03.582895337Z" level=info msg="Loading containers: done." 
+Submodule path 'drone-docker': checked out 'e8602b385d22f01b5278d3ae76b15dea3835a74a'
++ export PATH=$PATH:$GOPATH/bin
++ cd drone
++ pwd
+/drone/src/github.com/drone/drone
++ make deps
+go get -u golang.org/x/tools/cmd/cover
+go get -u github.com/eknkc/amber/...
+go get -u github.com/eknkc/amber
+go get -u github.com/jteeuwen/go-bindata/...
+go get -u github.com/elazarl/go-bindata-assetfs/...
+go get -u github.com/dchest/jsmin
+go get -u github.com/franela/goblin
++ make gen
+go generate github.com/drone/drone/static
+Cannot read bindata.go open bindata.go: no such file or directory
+go generate github.com/drone/drone/template
+go generate github.com/drone/drone/store/datastore/ddl
++ make build
+go build --ldflags '-extldflags "-static" -X github.com/drone/drone/version.VersionDev=140' -o release/drone github.com/drone/drone/drone
+GOOS=linux   GOARCH=amd64 CGO_ENABLED=0 go build -o release/linux/amd64/drone   github.com/drone/drone/drone
+GOOS=linux   GOARCH=arm64 CGO_ENABLED=0 go build -o release/linux/arm64/drone   github.com/drone/drone/drone
+GOOS=linux   GOARCH=arm   CGO_ENABLED=0 go build -o release/linux/arm/drone     github.com/drone/drone/drone
+GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -o release/windows/amd64/drone github.com/drone/drone/drone
+GOOS=darwin  GOARCH=amd64 CGO_ENABLED=0 go build -o release/darwin/amd64/drone  github.com/drone/drone/drone
+tar -cvzf release/linux/amd64/drone.tar.gz   release/linux/amd64/drone
+release/linux/amd64/drone
+tar -cvzf release/linux/arm64/drone.tar.gz   release/linux/arm64/drone
+release/linux/arm64/drone
+tar -cvzf release/linux/arm/drone.tar.gz     release/linux/arm/drone
+release/linux/arm/drone
+tar -cvzf release/windows/amd64/drone.tar.gz release/windows/amd64/drone
+release/windows/amd64/drone
+tar -cvzf release/darwin/amd64/drone.tar.gz  release/darwin/amd64/drone
+release/darwin/amd64/drone
+sha256sum release/linux/amd64/drone.tar.gz   > release/linux/amd64/drone.sha256
+sha256sum release/linux/arm64/drone.tar.gz   > release/linux/arm64/drone.sha256
+sha256sum release/linux/arm/drone.tar.gz     > release/linux/arm/drone.sha256
+sha256sum release/windows/amd64/drone.tar.gz > release/windows/amd64/drone.sha256
+sha256sum release/darwin/amd64/drone.tar.gz  > release/darwin/amd64/drone.sha256
+You are running a custom build of the drone-docker plugin by @vespakoen+ /usr/local/bin/docker daemon -g /var/lib/docker -s vfs
+time="2016-06-20T11:01:35.302939266Z" level=info msg="New containerd process, pid: 19\n" 
+time="2016-06-20T11:01:36.343776923Z" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
+time="2016-06-20T11:01:36.345088170Z" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: can't change directory to '/lib/modules': No such file or directory\n, error: exit status 1" 
+time="2016-06-20T11:01:36.345784849Z" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-20T11:01:36.346536606Z" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: can't change directory to '/lib/modules': No such file or directory`, error: exit status 1" 
+time="2016-06-20T11:01:36.387458888Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address" 
+time="2016-06-20T11:01:36.490187330Z" level=warning msg="Your kernel does not support swap memory limit." 
+time="2016-06-20T11:01:36.493012239Z" level=info msg="Loading containers: start." 
 null
-time="2016-06-18T18:28:03.582907557Z" level=info msg="Daemon has completed initialization" 
-time="2016-06-18T18:28:03.582921427Z" level=info msg="Docker daemon" commit=b9f10c9 graphdriver=vfs version=1.11.2 
-time="2016-06-18T18:28:03.592563451Z" level=info msg="API listen on /var/run/docker.sock" 
-Loggin in to registry with user: vespakoen and email: k.schmeets@gmail.com
+time="2016-06-20T11:01:36.493157769Z" level=info msg="Loading containers: done." 
+time="2016-06-20T11:01:36.493179758Z" level=info msg="Daemon has completed initialization" 
+time="2016-06-20T11:01:36.493203581Z" level=info msg="Docker daemon" commit=b9f10c9 graphdriver=vfs version=1.11.2 
+time="2016-06-20T11:01:36.503318069Z" level=info msg="API listen on /var/run/docker.sock" 
+Registry credentials not provided. Guest mode enabled.
 + /usr/local/bin/docker version
 Client:
  Version:      1.11.2
@@ -59,49 +99,76 @@ Cgroup Driver: cgroupfs
 Plugins: 
  Volume: local
  Network: null host bridge
-Kernel Version: 4.4.0-22-generic
+Kernel Version: 4.4.0-24-generic
 Operating System: Alpine Linux v3.4 (containerized)
-OSType: linux
-Architecture: x86_64
-CPUs: 8
 WARNING: No swap limit support
 WARNING: bridge-nf-call-iptables is disabled
 WARNING: bridge-nf-call-ip6tables is disabled
+OSType: linux
+Architecture: x86_64
+CPUs: 8
 Total Memory: 15.55 GiB
-Name: fca50056c5d3
-ID: LI4C:FTCN:3EBV:E2M5:QS5I:OUSF:CKC2:4LU3:IDHC:NO4O:FMQQ:BM2H
+Name: 77ec5a3530fc
+ID: OEJ6:CX23:BXP6:3YNZ:RU62:ZLCG:3UDW:74G7:JU6X:4OMF:7RFY:5TVR
 Docker Root Dir: /var/lib/docker
 Debug mode (client): false
 Debug mode (server): false
 Registry: https://index.docker.io/v1/
-+ /usr/local/bin/docker build --pull=true --rm=true -f Dockerfile -t 42df9380e3e097ce7fc65fb186c8e99dde7c3128 .
-Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon  62.4 MB
-Step 1 : FROM busybox
-latest: Pulling from library/busybox
-385e281300cc: Pulling fs layer
++ /usr/local/bin/docker build --pull=true --rm=true -f drone/Dockerfile -t 9ba22c61ffe892c78f26a59c856865a3784d6d41 drone
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.97 MBSending build context to Docker daemon 73.53 MBSending build context to Docker daemon 74.09 MBSending build context to Docker daemon 74.65 MBSending build context to Docker daemon  75.2 MBSending build context to Docker daemon 75.76 MBSending build context to Docker daemon 76.32 MBSending build context to Docker daemon 76.87 MBSending build context to Docker daemon 77.43 MBSending build context to Docker daemon 77.99 MBSending build context to Docker daemon 78.54 MBSending build context to Docker daemon  79.1 MBSending build context to Docker daemon 79.66 MBSending build context to Docker daemon 80.22 MBSending build context to Docker daemon 80.77 MBSending build context to Docker daemon 81.33 MBSending build context to Docker daemon 81.89 MBSending build context to Docker daemon 82.44 MBSending build context to Docker daemon    83 MBSending build context to Docker daemon 83.56 MBSending build context to Docker daemon 84.12 MBSending build context to Docker daemon 84.67 MBSending build context to Docker daemon 85.23 MBSending build context to Docker daemon 85.79 MBSending build context to Docker daemon 86.34 MBSending build context to Docker daemon  86.9 MBSending build context to Docker daemon 87.46 MBSending build context to Docker daemon 88.01 MBSending build context to Docker daemon 88.57 MBSending build context to Docker daemon 89.13 MBSending build context to Docker daemon 89.69 MBSending build context to Docker daemon 90.24 MBSending build context to Docker daemon  90.8 MBSending build context to Docker daemon 91.36 MBSending build context to Docker daemon 91.91 MBSending build context to Docker daemon 92.47 MBSending build context to Docker daemon 93.03 MBSending build context to Docker daemon 93.59 MBSending build context to Docker daemon 94.14 MBSending build context to Docker daemon  94.7 MBSending build context to Docker daemon 95.26 MBSending build context to Docker daemon 95.81 MBSending build context to Docker daemon 96.37 MBSending build context to Docker daemon 96.93 MBSending build context to Docker daemon 97.48 MBSending build context to Docker daemon 98.04 MBSending build context to Docker daemon  98.6 MBSending build context to Docker daemon 99.16 MBSending build context to Docker daemon 99.71 MBSending build context to Docker daemon 100.3 MBSending build context to Docker daemon 100.8 MBSending build context to Docker daemon 101.4 MBSending build context to Docker daemon 101.9 MBSending build context to Docker daemon 102.5 MBSending build context to Docker daemon 103.1 MBSending build context to Docker daemon 103.6 MBSending build context to Docker daemon 104.2 MBSending build context to Docker daemon 104.7 MBSending build context to Docker daemon 105.3 MBSending build context to Docker daemon 105.8 MBSending build context to Docker daemon 106.4 MBSending build context to Docker daemon   107 MBSending build context to Docker daemon 107.5 MBSending build context to Docker daemon 108.1 MBSending build context to Docker daemon 108.6 MBSending build context to Docker daemon 109.2 MBSending build context to Docker daemon 109.7 MBSending build context to Docker daemon 110.3 MBSending build context to Docker daemon 110.9 MBSending build context to Docker daemon 111.4 MBSending build context to Docker daemon   112 MBSending build context to Docker daemon 112.5 MBSending build context to Docker daemon 113.1 MBSending build context to Docker daemon 113.6 MBSending build context to Docker daemon 114.2 MBSending build context to Docker daemon 114.8 MBSending build context to Docker daemon 115.3 MBSending build context to Docker daemon 115.9 MBSending build context to Docker daemon 116.4 MBSending build context to Docker daemon   117 MBSending build context to Docker daemon 117.5 MBSending build context to Docker daemon 118.1 MBSending build context to Docker daemon 118.7 MBSending build context to Docker daemon 119.2 MBSending build context to Docker daemon 119.8 MBSending build context to Docker daemon 120.3 MBSending build context to Docker daemon 120.9 MBSending build context to Docker daemon 121.4 MBSending build context to Docker daemon   122 MBSending build context to Docker daemon 122.6 MBSending build context to Docker daemon 123.1 MBSending build context to Docker daemon 123.7 MBSending build context to Docker daemon 124.2 MBSending build context to Docker daemon 124.8 MBSending build context to Docker daemon 125.3 MBSending build context to Docker daemon 125.9 MBSending build context to Docker daemon 126.5 MBSending build context to Docker daemon   127 MBSending build context to Docker daemon 127.6 MBSending build context to Docker daemon 128.1 MBSending build context to Docker daemon 128.7 MBSending build context to Docker daemon 129.2 MBSending build context to Docker daemon 129.8 MBSending build context to Docker daemon 130.4 MBSending build context to Docker daemon 130.9 MBSending build context to Docker daemon 131.5 MBSending build context to Docker daemon   132 MBSending build context to Docker daemon 132.6 MBSending build context to Docker daemon 133.1 MBSending build context to Docker daemon 133.7 MBSending build context to Docker daemon 134.3 MBSending build context to Docker daemon 134.8 MBSending build context to Docker daemon 135.4 MBSending build context to Docker daemon 135.9 MBSending build context to Docker daemon 136.5 MBSending build context to Docker daemon   137 MBSending build context to Docker daemon 137.6 MBSending build context to Docker daemon 138.1 MBSending build context to Docker daemon 138.7 MBSending build context to Docker daemon 139.3 MBSending build context to Docker daemon 139.7 MB
+Step 1 : FROM centurylink/ca-certs
+latest: Pulling from centurylink/ca-certs
 a3ed95caeb02: Pulling fs layer
+802d894958a2: Pulling fs layer
 a3ed95caeb02: Verifying Checksum
 a3ed95caeb02: Download complete
-385e281300cc: Verifying Checksum
-385e281300cc: Download complete
-385e281300cc: Pull complete
 a3ed95caeb02: Pull complete
-Digest: sha256:4a731fb46adc5cefe3ae374a8b6020fc1b6ad667a279647766e9a3cd89f6fa92
-Status: Downloaded newer image for busybox:latest
- ---> 47bcc53f74dc
-Step 2 : RUN echo Hi!
- ---> Running in ac771e3378a3
-Hi!
-time="2016-06-18T18:28:13.248000321Z" level=info msg="Layer sha256:c042884c582bf541a4d646be7cb3fcd0fe9c4db50396b79ed695702fe9936561 cleaned up" 
- ---> 958bf7863d70
-Removing intermediate container ac771e3378a3
-Successfully built 958bf7863d70
-+ /usr/local/bin/docker tag 42df9380e3e097ce7fc65fb186c8e99dde7c3128 vespakoen/drone-docker-compose:development
-+ /usr/local/bin/docker push vespakoen/drone-docker-compose:development
-The push refers to a repository [docker.io/vespakoen/drone-docker-compose]
+802d894958a2: Download complete
+802d894958a2: Pull complete
+Digest: sha256:d37879efd66f3df9a73168dcffc21a72cdf47ec74c8e122cd8c9fb9b494dfafd
+Status: Downloaded newer image for centurylink/ca-certs:latest
+ ---> ec29b98d130f
+Step 2 : EXPOSE 8000
+ ---> Running in 2a7a3f7fd280
+time="2016-06-20T11:01:41.608894421Z" level=info msg="Layer sha256:1197c79c8a1a7568f8ed0f9f53a347eaf0102de1bc05046a4c641d4772215458 cleaned up" 
+ ---> 6986278f6456
+Removing intermediate container 2a7a3f7fd280
+Step 3 : ENV DATABASE_DRIVER sqlite3
+ ---> Running in 9062c642fac7
+time="2016-06-20T11:01:41.660507540Z" level=info msg="Layer sha256:1197c79c8a1a7568f8ed0f9f53a347eaf0102de1bc05046a4c641d4772215458 cleaned up" 
+ ---> 4965119968ab
+Removing intermediate container 9062c642fac7
+Step 4 : ENV DATABASE_CONFIG /var/lib/drone/drone.sqlite
+ ---> Running in 5b997b5376f5
+time="2016-06-20T11:01:41.704512061Z" level=info msg="Layer sha256:1197c79c8a1a7568f8ed0f9f53a347eaf0102de1bc05046a4c641d4772215458 cleaned up" 
+ ---> ea5892138154
+Removing intermediate container 5b997b5376f5
+Step 5 : ENV GODEBUG netdns=go
+ ---> Running in 4634bc010675
+time="2016-06-20T11:01:41.748668053Z" level=info msg="Layer sha256:1197c79c8a1a7568f8ed0f9f53a347eaf0102de1bc05046a4c641d4772215458 cleaned up" 
+ ---> 02ebde112d99
+Removing intermediate container 4634bc010675
+Step 6 : ADD release/drone /drone
+ ---> 907423b12507
+Removing intermediate container 66da317adda1
+Step 7 : ENTRYPOINT /drone
+ ---> Running in 7ec4e44345c4
+time="2016-06-20T11:01:42.152325482Z" level=info msg="Layer sha256:b62a162d72de55f707c0426ac98b7c10e02a745811558deb56a24a53658642bb cleaned up" 
+ ---> 4a91df181bf5
+Removing intermediate container 7ec4e44345c4
+Step 8 : CMD server
+ ---> Running in c3965d7dbb9f
+time="2016-06-20T11:01:42.261854107Z" level=info msg="Layer sha256:b62a162d72de55f707c0426ac98b7c10e02a745811558deb56a24a53658642bb cleaned up" 
+ ---> 855f1b9548f2
+Removing intermediate container c3965d7dbb9f
+Successfully built 855f1b9548f2
++ /usr/local/bin/docker tag 9ba22c61ffe892c78f26a59c856865a3784d6d41 vespakoen/drone:latest
++ /usr/local/bin/docker push vespakoen/drone:latest
+The push refers to a repository [docker.io/vespakoen/drone]
+8b06c579dc44: Preparing
+0cfde93eba7d: Preparing
 5f70bf18a086: Preparing
-1834950e52ce: Preparing
-time="2016-06-18T18:28:16.213028458Z" level=error msg="Upload failed: unauthorized: authentication required" 
-time="2016-06-18T18:28:16.213108474Z" level=error msg="Attempting next endpoint for push after error: unauthorized: authentication required" 
+time="2016-06-20T11:01:44.027500822Z" level=error msg="Upload failed: unauthorized: authentication required" 
+time="2016-06-20T11:01:44.027570557Z" level=error msg="Attempting next endpoint for push after error: unauthorized: authentication required" 
 unauthorized: authentication required
 exit status 1
