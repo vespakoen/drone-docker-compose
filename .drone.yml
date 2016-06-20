@@ -3,11 +3,6 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
-  ping:
-    image: debian
-    commands:
-      - apt-get update && apt-get install -y openssh-client
-      - ssh cache@cache
   sftp_cache:
     server: cache:22
     user: cache
