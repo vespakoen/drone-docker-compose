@@ -31,6 +31,7 @@ pipeline:
     commands:
       - export PATH=$PATH:$GOPATH/bin
       - mv brads-drone drone
+      - cd drone
       - pwd
       - make deps
       - make gen
