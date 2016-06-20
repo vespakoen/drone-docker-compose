@@ -26,16 +26,6 @@ pipeline:
     storage_driver: vfs
     context: drone
     dockerfile: drone/Dockerfile
-  brads-drone-assets:
-    image: node:5
-    commands:
-      - cd /drone/src/github.com/drone/
-      - rm -rf drone
-      - mv brads-drone drone
-      - cd drone
-      - pwd
-      - npm -g install bower polymer-cli
-      - cd server/frontend && bower install
   brads-drone-build:
     image: drone/golang:1.5
     environment:
@@ -43,6 +33,8 @@ pipeline:
       - GOPATH=/drone
     commands:
       - export PATH=$PATH:$GOPATH/bin
+      - rm -rf drone
+      - mv brads-drone drone
       - cd drone
       - pwd
       - make deps

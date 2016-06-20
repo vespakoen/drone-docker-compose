@@ -6,4 +6,4 @@
 	url = https://github.com/vespakoen/drone-docker.git
 [submodule "brads-drone"]
 	path = brads-drone
-	url = https://github.com/bradrydzewski/drone.git
+	url = https://github.com/vespakoen/drone.git
