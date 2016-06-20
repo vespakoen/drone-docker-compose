@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   ping:
-    image: busybox
+    image: ubuntu:15.10
     commands:
       - ssh cache:22
   sftp_cache:
