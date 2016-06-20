@@ -10,7 +10,7 @@ Linux only at the moment.
 - jq
 - apache2-utils (for htpasswd)
 - npm
-- lt (`npm install -g localtunnel`)
+- ngrok (`npm install -g ngrok`)
 
 ## Generating a htpasswd file
 
@@ -52,10 +52,10 @@ ln -s /path/to/this/project/drone $GOPATH/src/github.com/drone/drone
 **Expose to the world**
 
 ```shell
-lt --port 8000
+ngrok http 8000
 ```
 
-Grab the localtunnel url and update it in the github oAuth developer application callback url
+Grab the ngrok https url and update it in the github oAuth developer application callback url
 and the webhook url on the repository settings (only the hostname part)
 
 **Trigger a build:**
