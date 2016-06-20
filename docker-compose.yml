@@ -51,3 +51,8 @@ services:
     volumes:
       - /registry/lib:/var/lib/registry
       - ./registry:/auth
+  cache:
+    image: atmoz/sftp
+    volumes:
+      - /cache:/home/cache/cache
+    command: cache:cache:1001
