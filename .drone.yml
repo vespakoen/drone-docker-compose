@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   ping:
-    image: ubuntu:15.10
+    image: debian
     commands:
       - apt-get update && apt-get install -y openssh-client
       - ssh cache@cache
