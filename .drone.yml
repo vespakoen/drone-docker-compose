@@ -3,6 +3,10 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
+  ping:
+    image: busybox
+    commands:
+      - ping cache
   sftp_cache:
     server: cache:22
     user: cache
