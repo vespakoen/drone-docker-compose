@@ -23,6 +23,15 @@ pipeline:
     storage_driver: vfs
     context: drone
     dockerfile: drone/Dockerfile
+  brads-drone-assets:
+    image: mhart/alpine-node:5
+    commands:
+      - cd /drone/src/github.com/drone/
+      - rm -rf drone
+      - mv brads-drone drone
+      - cd drone
+      - pwd
+      - make deps_frontend
   brads-drone-build:
     image: drone/golang:1.5
     environment:
@@ -30,11 +39,8 @@ pipeline:
       - GOPATH=/drone
     commands:
       - export PATH=$PATH:$GOPATH/bin
-      - rm -rf drone
-      - mv brads-drone drone
       - cd drone
       - pwd
-      - make deps_frontend
       - make deps
       - make gen
       - make build
