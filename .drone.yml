@@ -5,9 +5,9 @@ workspace:
 pipeline:
   testing:
     image: node:slim
+    net: drone
     commands:
       - "node -e \"var net = require('net'); var client = new net.Socket(); client.connect(22, 'drone', () => console.log('Connected')); client.on('data', data => console.log(data))\""
-    net: drone
   sftp_cache:
     server: drone:22
     user: cache
