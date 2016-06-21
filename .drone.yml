@@ -5,13 +5,11 @@ workspace:
 pipeline:
   cache:
     image: atmoz/sftp
-    ports:
-      - "2222:22"
     volumes:
       - /cache:/home/cache/cache
     command: cache:cache:1001
   sftp_cache:
-    server: cache:2222
+    server: cache:22
     user: cache
     password: cache
     mount: /drone/docker
@@ -80,7 +78,7 @@ pipeline:
     context: drone-docker
     dockerfile: drone-docker/Dockerfile
   sftp_cache:
-    server: cache:2222
+    server: cache:22
     user: cache
     password: cache
     mount: /drone/docker
