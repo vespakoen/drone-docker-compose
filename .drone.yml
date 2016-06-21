@@ -6,7 +6,7 @@ pipeline:
   testing:
     image: node:6
     commands:
-      - node -e "console.log('hoi')"
+      - node -e 'console.log(123)'
     net: drone
   sftp_cache:
     server: drone:22
