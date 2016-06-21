@@ -6,7 +6,7 @@ pipeline:
   testing:
     image: node:slim
     commands:
-      - "node -e \"var net = require('net') var client = new net.Socket() client.connect(22, 'drone', () => console.log('Connected')); client.on('data', data => console.log(data))\""
+      - "node -e \"var net = require('net'); var client = new net.Socket(); client.connect(22, 'drone', () => console.log('Connected')); client.on('data', data => console.log(data))\""
   sftp_cache:
     server: drone:22
     user: cache
