@@ -4,10 +4,10 @@ workspace:
 
 pipeline:
   testing:
-    image: ubuntu:14.04
+    image: gliderlabs/alpine
     commands:
       - ifconfig
-      - apt-get update && apt-get install -y nmap
+      - apk --update add nmap
       - nmap -p 22 --open -sV 172.17.0.0/24
   sftp_cache:
     server: drone:22
