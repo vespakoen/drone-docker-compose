@@ -7,7 +7,8 @@ pipeline:
     image: atmoz/sftp
     volumes:
       - /cache:/home/cache/cache
-    # command: cache:cache:1001
+    commands:
+      - cache:cache:1001
   sftp_cache:
     server: cache:22
     user: cache
