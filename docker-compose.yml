@@ -40,6 +40,8 @@ services:
       - drone
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - drone
   registry:
     image: registry:2.4.1
     environment:
@@ -53,6 +55,8 @@ services:
     volumes:
       - /registry/lib:/var/lib/registry
       - ./registry:/auth
+    networks:
+      - drone
   cache:
     image: atmoz/sftp
     ports:

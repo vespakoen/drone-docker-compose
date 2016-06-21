@@ -3,11 +3,11 @@
 . ./env.sh
 
 function add_secret {
-  docker run --net dronedockercompose_default --rm drone/drone:0.5 -s http://drone:8000 -t $DRONE_USER_TOKEN secret add --image=vespakoen/drone-docker:0.5.1 vespakoen/drone-docker-compose $1 $2
+  docker run --net drone --rm drone/drone:0.5 -s http://drone:8000 -t $DRONE_USER_TOKEN secret add --image=vespakoen/drone-docker:0.5.1 vespakoen/drone-docker-compose $1 $2
 }
 
 function rm_secret {
-  docker run --net dronedockercompose_default --rm drone/drone:0.5 -s http://drone:8000 -t $DRONE_USER_TOKEN secret rm vespakoen/drone-docker-compose $1
+  docker run --net drone --rm drone/drone:0.5 -s http://drone:8000 -t $DRONE_USER_TOKEN secret rm vespakoen/drone-docker-compose $1
 }
 
 rm_secret DOCKER_EMAIL
