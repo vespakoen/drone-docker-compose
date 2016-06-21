@@ -58,5 +58,8 @@ services:
     volumes:
       - /cache:/home/cache/cache
     command: cache:cache:1001
-    # networks:
-    #   - drone
+#       networks:
+#         - drone
+# networks:
+#   drone:
+#     driver: bridge
