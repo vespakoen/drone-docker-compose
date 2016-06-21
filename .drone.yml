@@ -3,18 +3,18 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
-  testing:
-    image: node:slim
-    net: drone
-    commands:
-      - "node -e \"var net = require('net'); var client = new net.Socket(); client.connect(22, 'drone', () => console.log('Connected')); client.on('data', data => console.log(data))\""
-  sftp_cache:
-    server: drone:22
-    user: cache
-    password: cache
-    mount: /drone/docker
-    restore: true
-    net: drone
+  # testing:
+  #   image: node:slim
+  #   net: drone
+  #   commands:
+  #     - "node -e \"var net = require('net'); var client = new net.Socket(); client.connect(22, 'drone', () => console.log('Connected')); client.on('data', data => console.log(data))\""
+  # sftp_cache:
+  #   server: drone:22
+  #   user: cache
+  #   password: cache
+  #   mount: /drone/docker
+  #   restore: true
+  #   net: drone
   drone-build:
     image: drone/golang:1.5
     environment:
@@ -78,10 +78,10 @@ pipeline:
     storage_driver: vfs
     context: drone-docker
     dockerfile: drone-docker/Dockerfile
-  sftp_cache:
-    server: drone:22
-    user: cache
-    password: cache
-    mount: /drone/docker
-    rebuild: true
-    net: drone
+  # sftp_cache:
+  #   server: drone:22
+  #   user: cache
+  #   password: cache
+  #   mount: /drone/docker
+  #   rebuild: true
+  #   net: drone
