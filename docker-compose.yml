@@ -51,16 +51,3 @@ services:
     volumes:
       - /registry/lib:/var/lib/registry
       - ./registry:/auth
-  cache:
-    image: atmoz/sftp
-    ports:
-      - "2222:22"
-    volumes:
-      - /cache:/home/cache/cache
-    command: cache:cache:1001
-    networks:
-      - drone
-networks:
-  drone:
-    external:
-      name: ci_default
