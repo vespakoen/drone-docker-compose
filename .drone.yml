@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   testing:
-    image: node:6
+    image: node:slim
     commands:
       - node -e 'console.log(123)'
     net: drone
