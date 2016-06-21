@@ -4,11 +4,10 @@ workspace:
 
 pipeline:
   testing:
-    image: gliderlabs/alpine
+    image: node:6
     commands:
-      - ifconfig
-      - apk --update add nmap
-      - nmap -p 22 --open -sV 172.17.0.0/24
+      - node -e "console.log('hoi')"
+    net: drone
   sftp_cache:
     server: drone:22
     user: cache
