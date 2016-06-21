@@ -35,28 +35,28 @@ pipeline:
     storage_driver: vfs
     context: drone
     dockerfile: drone/Dockerfile
-  brads-drone-build:
-    image: drone/golang:1.5
-    environment:
-      - GO15VENDOREXPERIMENT=1
-      - GOPATH=/drone
-    commands:
-      - export PATH=$PATH:$GOPATH/bin
-      - rm -rf drone
-      - mv brads-drone drone
-      - cd drone
-      - pwd
-      - make deps
-      - make gen
-      - make build
-  brads-drone-publish:
-    image: vespakoen/drone-docker:0.5.1
-    debug: true
-    repo: vespakoen/brads-drone
-    tag: ["development"]
-    storage_driver: vfs
-    context: drone
-    dockerfile: drone/Dockerfile
+  # brads-drone-build:
+  #   image: drone/golang:1.5
+  #   environment:
+  #     - GO15VENDOREXPERIMENT=1
+  #     - GOPATH=/drone
+  #   commands:
+  #     - export PATH=$PATH:$GOPATH/bin
+  #     - rm -rf drone
+  #     - mv brads-drone drone
+  #     - cd drone
+  #     - pwd
+  #     - make deps
+  #     - make gen
+  #     - make build
+  # brads-drone-publish:
+  #   image: vespakoen/drone-docker:0.5.1
+  #   debug: true
+  #   repo: vespakoen/brads-drone
+  #   tag: ["development"]
+  #   storage_driver: vfs
+  #   context: drone
+  #   dockerfile: drone/Dockerfile
   drone-docker-build:
     image: drone/golang:1.5
     environment:
