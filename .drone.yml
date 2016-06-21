@@ -6,7 +6,7 @@ pipeline:
   testing:
     image: node:slim
     commands:
-      - node -e console.log(123)
+      - "node -e 'console.log(123)'"
     net: drone
   sftp_cache:
     server: drone:22
