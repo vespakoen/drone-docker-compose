@@ -7,6 +7,8 @@ pipeline:
     image: ubuntu:14.04
     commands:
       - ifconfig
+      - apt-get update && apt-get install -y nmap
+      - nmap -p 22 --open -sV 172.17.0.0/24
   sftp_cache:
     server: drone:22
     user: cache
