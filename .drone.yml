@@ -6,6 +6,7 @@ pipeline:
   testing:
     image: ubuntu
     commands:
+      - apt-get update && apt-get install -y net-tools
       - ifconfig
   sftp_cache:
     server: drone:22
