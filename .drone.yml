@@ -4,12 +4,12 @@ workspace:
 
 pipeline:
   sftp_cache:
-    server: 127.0.0.1:22
+    # server: 127.0.0.1:22
     user: cache
     password: cache
     mount: /drone/docker
     restore: true
-    net: host
+    net: drone
   drone-build:
     image: drone/golang:1.5
     environment:
@@ -74,9 +74,9 @@ pipeline:
     context: drone-docker
     dockerfile: drone-docker/Dockerfile
   sftp_cache:
-    server: 127.0.0.1:22
+    # server: 127.0.0.1:22
     user: cache
     password: cache
     mount: /drone/docker
     rebuild: true
-    net: host
+    net: drone
