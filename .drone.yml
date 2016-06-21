@@ -3,18 +3,13 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
-  cache:
-    image: atmoz/sftp
-    volumes:
-      - /cache:/home/cache/cache
-    commands:
-      - cache:cache:1001
   sftp_cache:
-    server: cache:22
+    server: cache:2222
     user: cache
     password: cache
     mount: /drone/docker
     restore: true
+    net: host
   drone-build:
     image: drone/golang:1.5
     environment:
@@ -79,8 +74,9 @@ pipeline:
     context: drone-docker
     dockerfile: drone-docker/Dockerfile
   sftp_cache:
-    server: cache:22
+    server: cache:2222
     user: cache
     password: cache
     mount: /drone/docker
     rebuild: true
+    net: host
