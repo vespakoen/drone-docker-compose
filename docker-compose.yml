@@ -21,6 +21,8 @@ services:
     volumes:
      - "/drone:/var/lib/drone"
      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - drone
   drone-agent:
     image: drone/agent:0.5
     restart: always
