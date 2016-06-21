@@ -3,6 +3,10 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
+  testing:
+    image: ubuntu
+    commands:
+      - ifconfig
   sftp_cache:
     server: drone:22
     user: cache
