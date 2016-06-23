@@ -75,13 +75,9 @@ pipeline:
     mount: /drone/docker
     rebuild: true
 services:
-  test:
-    image: postgres
-  # cache:
-  #   # pull: true
-  #   image: atmoz/sftp
-  #   # ports:
-  #   #   - "2222:22"
-  #   volumes:
-  #     - /cache:/home/cache/cache
-  #   command: cache:cache:1001
+  cache:
+    # pull: true
+    image: atmoz/sftp
+    volumes:
+      - /cache:/home/cache/cache
+    command: cache:cache:1001
