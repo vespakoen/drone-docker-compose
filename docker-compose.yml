@@ -1,7 +1,7 @@
 version: '2'
 services:
   drone:
-    image: vespakoen/drone:development
+    image: vespakoen/drone:0.5.1
     # build:
     #   dockerfile: Dockerfile
     #   context: ./drone
@@ -21,8 +21,8 @@ services:
     volumes:
      - "/drone:/var/lib/drone"
      - "/var/run/docker.sock:/var/run/docker.sock"
-    networks:
-      - drone
+    # networks:
+    #   - drone
   drone-agent:
     image: drone/agent:0.5
     restart: always
@@ -40,8 +40,8 @@ services:
       - drone
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-    networks:
-      - drone
+    # networks:
+    #   - drone
   registry:
     image: registry:2.4.1
     environment:
@@ -55,8 +55,8 @@ services:
     volumes:
       - /registry/lib:/var/lib/registry
       - ./registry:/auth
-    networks:
-      - drone
+    # networks:
+    #   - drone
   cache:
     image: atmoz/sftp
     ports:
@@ -64,10 +64,10 @@ services:
     volumes:
       - /cache:/home/cache/cache
     command: cache:cache:1001
-    networks:
-      - drone
+#     networks:
+#       - drone
 
-networks:
-  drone:
-    external:
-      name: drone
+# networks:
+#   drone:
+#     external:
+#       name: drone
