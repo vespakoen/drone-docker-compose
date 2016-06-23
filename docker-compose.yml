@@ -24,7 +24,7 @@ services:
     # networks:
     #   - drone
   drone-agent:
-    image: drone/agent:0.5
+    image: vespakoen/drone:0.5.1
     restart: always
     environment:
       DRONE_SERVER: http://drone:8000
@@ -40,6 +40,7 @@ services:
       - drone
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
+    command: agent
     # networks:
     #   - drone
   registry:
