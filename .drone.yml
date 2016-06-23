@@ -74,8 +74,9 @@ pipeline:
     image: plugins/sftp-cache:latest
     mount: /drone/docker
     rebuild: true
-compose:
+services:
   cache:
+    pull: true
     image: atmoz/sftp
     # ports:
     #   - "2222:22"
