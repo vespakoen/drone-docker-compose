@@ -21,8 +21,6 @@ services:
     volumes:
      - "/drone:/var/lib/drone"
      - "/var/run/docker.sock:/var/run/docker.sock"
-    # networks:
-    #   - drone
   drone-agent:
     image: vespakoen/drone:0.5.1
     restart: always
@@ -41,8 +39,6 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     command: agent
-    # networks:
-    #   - drone
   registry:
     image: registry:2.4.1
     environment:
@@ -56,17 +52,3 @@ services:
     volumes:
       - /registry/lib:/var/lib/registry
       - ./registry:/auth
-    # networks:
-    #   - drone
-  cache:
-    image: atmoz/sftp
-    volumes:
-      - /cache:/home/cache/cache
-    command: cache:cache:1001
-#     networks:
-#       - drone
-
-# networks:
-#   drone:
-#     external:
-#       name: drone
