@@ -3,14 +3,10 @@ workspace:
   path: src/github.com/drone
 
 pipeline:
-  dump-fs:
-    image: busybox
-    commands:
-      - find /
   load-cache:
     image: plugins/sftp-cache:latest
     mount:
-      - drone
+      - /drone
     restore: true
   drone-build:
     image: drone/golang:1.5
@@ -77,7 +73,7 @@ pipeline:
     dockerfile: drone-docker/Dockerfile
   save-cache:
     image: plugins/sftp-cache:latest
-    mount: /drone/docker
+    mount: /drone
     rebuild: true
 services:
   cache:
