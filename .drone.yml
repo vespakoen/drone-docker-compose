@@ -6,7 +6,7 @@ pipeline:
   load-cache:
     image: plugins/sftp-cache:latest
     mount:
-      - /drone
+      - drone
     restore: true
   drone-build:
     image: drone/golang:1.5
@@ -73,7 +73,8 @@ pipeline:
     dockerfile: drone-docker/Dockerfile
   save-cache:
     image: plugins/sftp-cache:latest
-    mount: /drone
+    mount:
+      - drone
     rebuild: true
 services:
   cache:
